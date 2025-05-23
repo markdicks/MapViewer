@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Coordinate Map Viewer";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="~/css/map.css" />
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Coordinate Map Viewer</h2>
+    <div class="row mb-3">
+        <div class="col-md-5">
+            <input type="text" id="latitude" class="form-control" placeholder="Enter Latitude (e.g., 40.7128)" />
+        </div>
+        <div class="col-md-5">
+            <input type="text" id="longitude" class="form-control" placeholder="Enter Longitude (e.g., -74.0060)" />
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary w-100" onclick="showLocation()">Show Location</button>
+        </div>
+    </div>
+    <div id="map"></div>
+</div>
+
+@section Scripts {
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="~/js/map.js"></script>
+}
